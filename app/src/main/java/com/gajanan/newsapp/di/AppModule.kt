@@ -3,12 +3,12 @@ package com.gajanan.newsapp.di
 import android.app.Application
 import android.content.Context
 import androidx.room.Room
+import com.gajanan.newsapp.BuildConfig
 import com.gajanan.newsapp.database.NewsDatabase
 import com.gajanan.newsapp.network.Endpoints
 import com.gajanan.newsapp.network.RetrofitApiInterface
 import com.gajanan.newsapp.utils.ConnectivityObserver
 import com.gajanan.newsapp.utils.ConnectivityObserverImpl
-import com.gajanan.newsapp.utils.Constants.AUTHORIZATION_TOKEN
 import com.gajanan.newsapp.utils.Constants.CONNECTION_TIMEOUT
 import com.gajanan.newsapp.utils.Constants.READ_TIMEOUT
 import com.gajanan.newsapp.utils.Constants.WRITE_TIMEOUT
@@ -43,7 +43,7 @@ object AppModule {
                 val originalReq = chain.request()
                 val newRequest = originalReq
                     .newBuilder()
-                    .header("Authorization", "Bearer $AUTHORIZATION_TOKEN")
+                    .header("Authorization", "Bearer ${BuildConfig.AUTHORIZATION_TOKEN}")
                     .build()
                 chain.proceed(newRequest)
             })

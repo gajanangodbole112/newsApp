@@ -20,6 +20,9 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        setProperty("archivesBaseName", "NewsApp-v${versionName}(${versionCode})")
+        buildConfigField("String", "AUTHORIZATION_TOKEN", "\"861447a80b6b478086173b6242ba632c\"")
     }
 
     buildTypes {
@@ -40,6 +43,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"

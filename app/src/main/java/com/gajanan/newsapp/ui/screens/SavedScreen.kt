@@ -25,6 +25,7 @@ import com.gajanan.newsapp.ui.viewModels.NewsViewModel
 import com.gajanan.newsapp.ui.views.NewsItem
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.collectLatest
+import androidx.compose.material3.MaterialTheme
 
 @Composable
 fun SavedScreen(
@@ -62,7 +63,7 @@ fun SavedScreen(
         }else{
             Text(
                 text = "No Articles Available!",
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.secondary,
                 fontSize = 14.sp,
                 modifier = Modifier.align(Alignment.Center)
             )

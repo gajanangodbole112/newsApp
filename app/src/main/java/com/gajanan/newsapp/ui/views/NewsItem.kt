@@ -14,9 +14,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -39,6 +41,12 @@ fun NewsItem(
     readMoreInvoke: () -> Unit
 ) {
     ElevatedCard(
+        colors = CardColors(
+            contentColor = Color.Black,
+            containerColor = MaterialTheme.colorScheme.onPrimary,
+            disabledContentColor = Color.Gray,
+            disabledContainerColor = Color.White
+        ),
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp),
@@ -66,13 +74,13 @@ fun NewsItem(
                 text = article.title ?: "No Title",
                 fontSize = 18.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = Color.Black
+                color = MaterialTheme.colorScheme.secondary
             )
             Text(
                 text = article.description ?: "No Description",
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Normal,
-                color = Color.Black
+                color = MaterialTheme.colorScheme.secondary
             )
             Row(
                 modifier = Modifier.fillMaxWidth(),

@@ -1,8 +1,8 @@
 package com.gajanan.newsapp.ui.views
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
@@ -29,8 +29,7 @@ fun BottomBar(navController: NavController) {
             modifier = Modifier
                 .height(80.dp),
             contentColor = Color.Gray,
-            containerColor = Color.White,
-
+            containerColor = MaterialTheme.colorScheme.onPrimary,
         ) {
             items.forEach { screen ->
                 val selected = currentRoute == screen.route
@@ -59,7 +58,7 @@ fun BottomBar(navController: NavController) {
                                 restoreState = true
                             }
                         }
-                    },
+                    }
                 )
             }
         }

@@ -43,6 +43,15 @@
 - Navigation Compose
 - Material 3
 
+## Help: How To Run ? / Installation Guide
+- Required **AGP** version - 8.5.2
+- Required - JDK 17
+- Using latest Android Studio [Ladybug]
+- Target API Level 35
+ - Enjoy 😍
+
+## Video
+https://github.com/user-attachments/assets/9c7ad781-4422-443c-85f8-4a9c1ab1a624
 
 ## Screenshots
 | Light Mode | Dark Mode |
@@ -56,6 +65,9 @@
 | Saved Screen |
 |-------------|
 ![image](https://github.com/user-attachments/assets/062e05e6-7e1d-4bc3-9596-c69197085473)
+
+
+
 
 
 
